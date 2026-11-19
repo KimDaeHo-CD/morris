@@ -67,19 +67,50 @@
           <img src="../images/main/visual04.jpg" alt="" />
         </li>
       </ul>
+      <div class="pagination"></div>
     </div>
   </body>
   <script>
+    const customBullets = [
+      `
+       <span class="no">01</span>
+        <p class="title">Prime Glitter Highlighter S</p>
+        <p class="desc">steady in hand</p>
+        <span class="btn">finf out</span>`,
+      `
+         <span class="no">02</span>
+        <p class="title">Prime Glitter Highlighter S</p>
+        <p class="desc">steady in hand</p>
+        <span class="btn">finf out</span>`,
+      `
+         <span class="no">03</span>
+        <p class="title">Prime Glitter Highlighter S</p>
+        <p class="desc">steady in hand</p>
+        <span class="btn">finf out</span>`,
+      `
+         <span class="no">04</span>
+        <p class="title">Prime Glitter Highlighter S</p>
+        <p class="desc">steady in hand</p>
+        <span class="btn">finf out</span>
+        `,
+    ];
     const swiper = new Swiper(".main-visual", {
       loop: true,
-      speed: 1,
+      speed: 1000,
       effect: "coverflow",
       autoplay: {
-        delay: 0,
+        delay: 2000,
         disableOnInteraction: false,
       },
-      speed: 2000,
+      speed: 1000,
       loop: true,
+      pagination: {
+        el: ".main-visual .pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<div class="${className}">${customBullets[index]}</div>`;
+        },
+      },
     });
   </script>
 </html>
