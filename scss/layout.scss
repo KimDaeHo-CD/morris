@@ -162,4 +162,28 @@ body {
       background-color: chocolate;
     }
   }
+  .title-box {
+    p {
+      font-size: 68px;
+      font-weight: 700;
+    }
+  }
+}
+.h2txt {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  // margin: 0 20px;
+  padding: 44px;
+  background-color: $light-gray;
+  h1 {
+    font-size: 80px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+.cate {
+  border: 3px solid #00cc55;
+  background-color: $dark-gray;
 }
